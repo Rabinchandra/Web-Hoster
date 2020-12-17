@@ -1,0 +1,840 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@200;300;400&display=swap');
+
+
+* {
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    font-family: 'Muli', arial;
+    outline: none;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #707070;
+    transition-property: color;
+    transition-duration: .7s;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    box-shadow: 0px 0px 12px 2px rgba(73, 73, 73, 0.2);
+    border-radius: 6px;
+    margin: 15px;
+    padding: 3em 12px;
+    text-align: center;
+    color: #3D3D3D;
+    line-height: 1.7em;
+    transition-property: box-shadow;
+    transition-duration: .5s;
+    cursor: pointer;
+    width: 30%;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 16px 5px rgba(73, 73, 73, 0.3);
+}
+
+.btn {
+    transition-property: background, color;
+    transition-duration: .5s;
+}
+
+/* Menu Bar */
+.menu-bar {
+    height: 0px;
+    position: fixed;
+    background-color: rgba(21, 168, 187, 0.856);
+    z-index: 1;
+    top: 30px;
+    width: 100%;
+    text-align: center;
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
+    overflow: hidden;
+    display: flex;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+}
+
+.menu-bar-on {
+    height: 100%;
+}
+
+.menu-bar a {
+    color: #fff;
+    display: block;
+    padding: 1em 0px;
+}
+
+.menu-bar a:hover {
+    color: #cccccc;
+}
+
+.menu-bar .btn-login {
+    background: none;
+}
+
+
+/* Navbar */
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background: #FFFCFC;
+    z-index: 1;
+    width: 100%;
+    align-items: center;
+    position: fixed;
+    top: 0%;
+    box-shadow: 0px 5px 10px 0px rgba(65, 65, 65, 0.2);
+    padding: 18px 15px;
+}
+
+.navbar-brand {
+    margin-left: 35px;
+    display: flex;
+    align-items: center;
+    min-width: 200px;
+}
+
+.navbar-brand img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.navbar-brand a {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.navbar-nav {
+    justify-self: end;
+    margin-right: 35px;
+}
+
+.navbar-nav a {
+    margin-right: 1rem;
+}
+
+.navbar-nav a:hover {
+    color: rgb(24, 24, 24);
+}
+
+.navbar-nav .btn-login {
+    margin: 0 3rem;
+    background: #14B7FD;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.navbar-nav .btn-login:hover {
+    background: rgb(7, 168, 236);
+    color: #fff !important;
+}
+
+.toggle-bar {
+    display: none;
+    width: 60px;
+    cursor: pointer;
+    justify-self: flex-end;
+    align-self: center;
+    margin-right: 30px;
+}
+
+.toggle-bar > div {
+    width: 100%;
+    height: 5px;
+    margin-top: 7px;
+    background: rgba(90, 90, 90, 0.815);
+    border-radius: 6px;
+    transition-duration: 1s;
+}
+
+.toggle-bar-on > div {
+    width: 60%;
+}
+
+.toggle-bar-on > div:first-child {
+    transform: rotate(-45deg) translate(-9px, 10px);
+}
+
+.toggle-bar-on > div:nth-child(2) {
+    opacity: 0;
+}
+
+.toggle-bar-on > div:nth-child(3) {
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/* intro div */
+.intro-div {
+    margin-top: 10px;
+    padding: 14em 50px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    min-height: 100vh;
+    /* background: #CCFEF9; */
+    background-image: linear-gradient(to top left, #CCFEF9, rgb(165, 253, 244));
+}
+
+.intro-div-text {
+    /* border: 1px solid blue; */
+    flex-basis: 65%;
+}
+
+.intro-div-text .header {
+    font-weight: bold;
+    font-size: 3em;
+}
+
+.intro-div-text p {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    line-height: 1.5em;
+    color: #292929b7;
+    font-size: 1.2em;
+}
+
+.intro-div-text .intro-div-btn {
+    color: #fff;
+    background: #0E93FA;
+    padding: 1em 1.7em;
+    font-size: 1.6em;
+    border-radius: 6px;
+}
+
+.intro-div-text a.intro-div-btn:hover {
+    background: rgb(7, 136, 235);
+}
+
+.intro-div-icon {
+    width: 280px;
+    align-self: center;
+    /* border: 1px solid red; */
+}
+
+/* Web hoster info */
+.web-hoster-info {
+    background: #14B7FD;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.web-hoster-info-text {
+    padding: 0px 2.5em;
+    line-height: 1.3em;
+    font-size: 1.5em;
+    font-weight: 550;
+}
+
+.web-hoster-info .text-divider {
+    width: 2px;
+    background: #f4f4f4a9;
+    height: 60px;
+}
+
+/* hosting plan */
+.hosting-plan {
+    padding: 7em 10px;
+}
+
+.hosting-plan-header {
+    text-align: center;
+    font-size: 2em;
+    /* font-weight: 600; */
+    margin-bottom: 50px;
+}
+
+
+
+/* .plan-description {
+    border: 1px solid red;
+    height: 120px;
+} */
+
+.plan-name {
+    font-weight: bold;
+    display: block;
+    font-size: 1.4em;
+}
+
+.plan-info {
+    padding: 12px;
+}
+
+.plan-discount {
+    padding: 12px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.plan-discount-btn {
+    margin-left: 2em;
+    padding: 12px 16px;
+    font-size: 1.2em;
+    color: #fff;
+    background: #9666F2;
+    border: none;
+    border-radius: 6px;
+}
+
+.plan-discount span {
+    font-size: 18px;
+}
+
+.plan-price {
+    font-size: 2em;
+    padding: 1.2em 0px;
+    font-weight: bold;
+}
+
+.hosting-plan-card ul {
+    margin-bottom: 100px;
+    text-align: left;
+    list-style-type: none;
+    padding: 0 2em;
+}
+
+.hosting-plan-card li {
+    background: url('/icons/correct.png') no-repeat left center;
+    background-size: 20px;
+    padding-left: 2em;
+}
+
+.hosting-plan-card .btn-buy {
+    color: #fff;
+    font-size: 1.5em;
+    width: 80%;
+    max-width: 250px;
+    padding: 12px 0;
+    border-radius: 30px;
+    position: absolute;
+    bottom: 60px;
+    transform: translate(-50%);
+}
+
+.btn-buy-1 {
+    background: #726EFA;
+}
+
+.btn-buy-2 {
+    background: #F11794;
+}
+
+.btn-buy-3 {
+    background: #02D171;
+}
+
+.btn-buy-1:hover {
+    background: rgb(80, 74, 255);
+}
+
+.btn-buy-2:hover {
+    background: rgb(221, 8, 129);
+}
+
+.btn-buy-3:hover {
+    background: rgb(3, 179, 97);
+}
+
+/* About Web hoster div */
+.about-webhoster {
+    margin-top: 70px;
+    background: #726EFA;
+    position: relative;
+    width: 100%;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3em;
+    color: #fff;
+    line-height: 1.7em;
+}
+
+.about-webhoster::after {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background: inherit;
+    content: '';
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    transform-origin: bottom left;
+    transform: skewY(-3deg);
+}
+
+.about-webhoster-text {
+    flex-basis: 60%;
+    padding: 12px;
+    font-weight: 200;
+    font-size: 1.1em;
+}
+
+.about-webhoster-text .btn-learnmore {
+    background: #4541D1;
+    color: #fff;
+    padding: 16px 2em;
+    border: none;
+    font-size: 1.3em 0px;
+    margin-top: 2em;
+    display: block;
+    width: 220px;
+    text-align: center;
+    font-size: 1.3em;
+    border-radius: 4px;
+}
+
+.about-webhoster-text .btn-learnmore:hover {
+    background: rgb(49, 44, 204);
+}
+
+.about-webhoster-header {
+    font-size: 2em;
+    text-align: center;
+    line-height: 1.3em;
+}
+
+/* People Opinion Div */
+.opinion-card {
+    padding: 2em;
+}
+
+.opinion-header {
+    font-size: 2em;
+    text-align: center;
+    margin-top: 2.5em;
+    margin-bottom: 1.2em;
+}
+
+.opinion-card-img img {
+    width: 50%;
+}
+
+.opinion-card-text {
+    margin: 30px 0;
+    font-style: italic;
+}
+
+.opinion-card-speaker {
+    font-weight: bold;
+    text-align: right;
+    font-style: italic;
+}
+
+.quote {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+/* Why Web hoster div */
+.why-webhoster {
+    background: #14B7FD;
+    margin-top: 120px;
+    color: #fff;
+    padding: 4em 3em;
+    text-align: center;
+}
+
+.why-webhoster-header {
+    font-size: 2em;
+    margin-bottom: 50px;
+}
+
+.benefits-reasons-container {
+    display: grid;
+    grid-template-columns: 400px 400px;
+    grid-gap: 2em 0em;
+    justify-content: space-around;
+}
+
+.benefits-reasons-container > div {
+    position: relative;
+    line-height: 1.5em;
+    font-size: 1.3em;
+    font-weight: 200;
+}
+
+.benefits-reasons-container > div img {
+    height: 100px;
+    padding: 12px;
+}
+
+/* Get started */
+.get-started {
+    padding: 6em 0px;
+    text-align: center;
+}
+
+.get-started-header {
+    margin-bottom: 35px;
+    font-size: 2em;
+}
+
+.btn-create-account {
+    border: 1.4px solid #11B2EC;
+    color: #11B2EC;
+    /* padding: 16px; */
+    font-size: 1.3em;
+    position: relative;
+    /* background: transparent; */
+    width: 350px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.btn-create-account .text {
+    padding: 16px;
+}
+
+/* .btn-create-account:hover {
+    background: #11B2EC;
+    color: #fff;
+} */
+
+.overlay {
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 0;
+    background: #11B2EC;
+    z-index: -1;
+    border-radius: 0px 0px 50% 50%;
+    transition-property: border-radius, height;
+    transition-duration: .1s, 1s;
+}
+
+.btn-create-account:hover .overlay {
+    height: 190%;
+}
+
+.btn-create-account:hover {
+    color: #fff;
+}
+
+/* Footer */
+.footer {
+    background: #E6CDFF;
+    font-weight: 200;
+    font-size: 1.2em;
+    display: grid;
+    grid-template-columns: 20% 60%;
+    grid-gap: 2em;
+    justify-content: center;
+    padding: 3em 0px;
+
+}
+
+.social-media {
+    text-align: center;
+}
+
+.footer i {
+    font-size: 1.5em;
+    margin: 0px 5px;
+    color: black;
+}
+
+.footer i:hover {
+    color: #3D3D3D;
+}
+
+.footer .header {
+    font-weight: 300;
+}
+
+.footer-box-1 .header {
+    display: flex;
+    align-items: center;
+    font-size: 1.3em;
+}
+
+.footer-box-1 img {
+    height: 40px;
+}
+
+.footer-box-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+    text-align: center;
+    line-height: 1.7em;
+}
+
+.footer-box-2 a {
+    display: block;
+    color: black;
+}
+
+.copyright-div .hr {
+    width: 80%;
+    background-color: rgba(51, 51, 51, 0.5);
+    height: 1px;
+    margin: auto;
+    margin-bottom: 16px;
+}
+
+.copyright-div {
+    grid-column: 1/3;
+    text-align: center;
+}
+
+/* Media Query for responsive */
+@media screen and (max-width: 1000px) {
+    * {
+        /* border: 1px solid red; */
+    }
+
+    .toggle-bar {
+        display: block;
+    }
+
+    .menu-bar {
+        display: flex;
+    }
+
+    .navbar-nav {
+        display: none;
+    }
+
+    .web-hoster-info {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .hosting-plan-header {
+        font-size: 1.5em;
+    }
+    .card-container {
+        flex-direction: column;
+    }
+    .card {
+        width: 50%;
+        min-width: 300px;
+        margin: auto;
+        margin-bottom: 2em;
+    }
+    .about-webhoster {
+        flex-direction: column-reverse;
+    }
+
+    .opinion-header {
+        font-size: 1.5em;
+    }
+
+    .benefits-reasons-container {
+        display: block;
+    }
+
+    .benefits-reasons-container > div {
+        max-width: 350px;
+        margin: auto;
+        margin-top: 50px;
+    }
+
+    .get-started {
+        font-size: .8em;
+    }
+    .btn-create-account {
+        width: 250px;
+    }
+
+    .footer {
+        display: block;
+        padding: 3em;
+    }
+
+    .footer > div {
+        margin-top: 60px;
+    }
+
+    .footer-box-1 {
+        text-align: center;
+    }
+
+    .footer-box-1 .header {
+        justify-content: center;
+    }
+
+    .copyright-div {
+        width: 100%;
+    }
+
+    .copyright-div {
+        font-size: .8em;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    * {
+        /* border: 1px solid blue; */
+    }
+
+    .intro-div {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 4em;
+        padding-top: 10em;
+    }
+
+    .intro-div-icon img {
+        width: 200px
+    }
+
+    .intro-div-text .header {
+        font-size: 2em;
+    }
+
+    .intro-div p {
+        margin: 2em 0px;
+    }
+
+    .intro-div-btn {
+        display: inline-block;
+        font-size: 1.3em !important;
+        margin: auto;
+    }
+
+    .intro-div-icon {
+        margin-top: 3em;
+    }
+
+    .hosting-plan-header, .opinion-header{
+        font-size: 2em;
+    }
+
+    .web-hoster-info-text {
+        font-size: 1.1em;
+        padding: 0px 20px;
+    }
+
+
+}
+
+
+@media screen and (max-width: 550px) {
+
+    .toggle-bar-on > div {
+        width: 100%;
+    }
+    .toggle-bar-on > div:first-child {
+        transform: rotate(-45deg) translate(-5px, 2px);
+    }
+
+    .toggle-bar-on > div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .toggle-bar-on > div:nth-child(3) {
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+
+    .toggle-bar {
+        margin-right: 10px;
+        width: 30px;
+    }
+    .toggle-bar > div {
+        margin-top: 5px;
+        height: 3px;
+    }
+    .navbar {
+        width: 100%;
+    }
+
+    .navbar-brand {
+        margin: 0px;
+        min-width: 150px !important;
+    }
+
+    .navbar-brand a {
+        font-size: 1em;
+    }
+
+    .intro-div-text {
+        font-size: .8em;
+    }
+
+    .intro-div-text .header span {
+        display: block;
+    }
+
+    .intro-div-icon {
+        padding: 0px;
+        width: 100%;
+    }
+
+    .intro-div-icon img {
+        width: 150px;
+    }
+
+    .web-hoster-info-text {
+        padding: 10px !important;
+    }
+
+    .card {
+        font-size: 12px;
+        min-width: 80% !important;
+    }
+    .web-hoster-info {
+        font-size: 12px;
+    }
+
+    .hosting-plan-header, .opinion-header{
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+    .hosting-plan ul {
+        overflow: hidden;
+        padding: 0px;
+        width: 100% !important;
+    }
+
+    .about-webhoster {
+        font-size: 12px;
+    }
+    .about-webhoster .btn-learnmore {
+        width: 100%;
+        padding: 10px 0px;
+    }
+
+    .opinion-card img {
+        width: 50%;
+    }
+
+    .why-webhoster {
+        font-size: 12px;
+    }
+
+    .btn-create-account {
+        width: 80%;
+        padding: 0px;
+        font-size: 16px;
+    }
+
+    .footer-box-2 {
+        grid-template-columns: 1fr;
+    }
+}
